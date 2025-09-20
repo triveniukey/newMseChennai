@@ -647,7 +647,7 @@ label {
   margin-bottom: 40px;
   position: relative;
   z-index: 1;
-  margin-top: -60px;
+  margin-top:20px;
 }
 
 .site-title-tagline {
@@ -655,7 +655,7 @@ label {
   letter-spacing: 4px;
   font-size: 18px;
   font-weight: 700;
-  margin-top: -320px;
+  /* margin-top: -300px; */
   color: var(--theme-color2);
   position: relative;
   border-bottom: 2px solid var(--theme-color2);
@@ -664,12 +664,14 @@ label {
 .site-title-tagline i{
   line-height: 0;
   font-size: 20px;
+
 }
 
 .site-title {
   font-weight: 700;
+  margin-top: 30px;
   text-transform: capitalize;
-  font-size: 40px;
+  font-size: 32px;
   color:  var(--color-dark);
   margin-top: 10px;
   margin-bottom: 0;
@@ -4563,7 +4565,7 @@ label {
 43. Video css 
 ======================*/
 .video-area{
-  margin-top: -150px;
+  margin-top: -160px;
 
 }
 .video-area .theme-btn{
@@ -4594,6 +4596,7 @@ label {
   justify-content: center;
   border-radius: 5px;
   height: 350px;
+  margin-top: -20px;
   z-index: 100;
 }
 
