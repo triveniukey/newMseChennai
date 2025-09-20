@@ -1,0 +1,296 @@
+.boxed #wrapper {
+    padding: 0px 20px;
+    background: #fff;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    position:relative;
+}
+.work-description h3{color:#0e56de; font-size: 18px; margin-bottom: 5px;}
+ul#portfolio.detail { list-style:none; margin:0; padding:0px;  }
+#portfolio.detail li { margin-bottom:10px; position: relative;}  
+#portfolio.detail li.hentry { padding:0 }
+/*#portfolio.detail li.first { clear:both }*/
+.portfolio.detail h5 a{font-size:16px;}  
+#portfolio.detail li p img { display:block }   
+ul.filters {float:right;list-style:none;}
+ul.filters li {float:left; padding-left: 10px; }
+ul.filters li a { padding-left: 10px; font-size: 14px; color: #030303; outline: none }
+ul.filters li a:hover, ul.filters li a.active { color: #B77A2B }
+
+.isotope,
+.isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -ms-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property:    -moz-transform, opacity;
+    -ms-transition-property:     -ms-transform, opacity;
+    -o-transition-property:         top, left, opacity;
+    transition-property:         transform, opacity;
+}
+.isotope-item {
+    z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+
+#portfolio.detail .ch-item {
+    width: 258px;
+    height: 170px;
+    position: relative;
+    cursor: default;
+    border-radius: 0;
+     box-shadow: 0 0 3px 3px #009bb3;
+    border: 1px solid #23eaff;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#portfolio.detail .ch-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+
+    -webkit-backface-visibility: hidden; /*for a smooth font */
+
+}
+#ie8 #portfolio.detail .ch-item {height: 140px !important; width: 208px !important; }
+#ie8 #portfolio.detail .ch-info { background-color: rgb( 0, 0, 0 ); }
+
+#portfolio.detail .ch-info p {
+    color: #fff;
+    position: relative;
+    font-family: 'Open Sans',sans-serif;
+    padding: 0;
+    margin: 0;
+    text-shadow: 
+        0 0 1px #fff, 
+        0 1px 2px rgba(0,0,0,0.3);
+    filter: alpha(opacity=0);
+}
+
+#portfolio.detail .ch-info p.subtitle { font-size: 11px; text-align:center;}
+
+
+#portfolio.detail .ch-item-hover:hover, #portfolio.detail .ch-item-opened {
+    box-shadow: 
+        inset 0 0 0 110px rgba(0,0,0, 0.5),
+        0 1px 2px rgba(0,0,0,0.1);
+    border: 5px solid #0ad2c9;
+}
+
+#portfolio.detail .ch-item:hover .ch-info, #portfolio.detail .ch-item-opened .ch-info {
+    opacity: 1;
+    filter: alpha(opacity=70);
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);	
+}
+
+#ie8 #portfolio.detail .ch-item:hover .ch-info p, #portfolio.detail .ch-item-opened .ch-info p { filter: alpha(opacity=100); }
+
+#portfolio.detail .slide_detail {
+    cursor: default;
+    display: none;
+    float: left;
+    left: 0;
+    margin: 20px 0;
+    position: absolute;
+    z-index: 9;
+    background: #f1f4f5 url('images/slide_detail_top.png') no-repeat top center;
+}
+
+#portfolio.detail .portfolio-full-description .work-thumbnail .thumb-wrapper {border: 1px solid #d4d100;
+box-shadow: 0 0 3px 2px #84661e; }
+
+
+.boxed #portfolio.detail .slide_detail {
+    padding-left:20px;
+    padding-right:20px;
+}
+
+#portfolio.detail .slide_detail .container {
+    background: url('images/slide_detail_bottom.png') no-repeat bottom center;
+    position: relative;
+}
+
+#portfolio.detail .slide_detail .slide_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 10;
+    color:#00bcd4;
+}
+
+#portfolio.detail .portfolio-full-description li { margin-bottom: 0 }
+#portfolio.detail .portfolio-full-description .work-skillsdate p { border:0px; margin: 0; background-position:left center; padding-left:30px; }
+#portfolio.detail .portfolio-full-description .work {padding:20px; }
+#portfolio.detail hr {
+    background: none repeat scroll 0 50% transparent;
+    border: 0 none;
+    color: transparent;
+    display: none;
+    float: left;
+    height: 425px;
+    line-height: 0;
+    margin: 10px 0;
+    position: relative;
+    width: 960px;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+#portfolio.detail .ch-info-icons {
+    text-align: center;
+    margin-top: 19.5%;
+    margin-bottom: 8%;
+}
+
+#portfolio.detail .ch-info-text {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (min-width: 1200px) { 
+    #portfolio.detail .ch-item {height: 170px !important; width: 258px !important; }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+    #portfolio.detail .ch-item {height: 140px !important; width: 208px !important; }
+}  
+@media (min-width: 768px) and (max-width: 979px) {
+    #portfolio.detail .ch-item {height: 104px !important; width: 154px !important; }
+
+    #portfolio.detail .ch-info-icons { margin-top: 11.5% }
+    #portfolio.detail .ch-info p.title { font-size: 13px; margin-bottom: 3px;}
+    #portfolio.detail .ch-info p.subtitle { font-size: 10px; }
+
+    #portfolio.detail hr { width: 700px; }
+}                                     
+@media (max-width: 767px) { 
+    #portfolio.detail .ch-item {height: 170px !important; width: 225px !important; }
+}
+
+@media (max-width: 320px) { 
+    #portfolio.detail .ch-item {height: 120px !important; width: 170px !important; }
+}
+
+/* color box */
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(../images/colorbox/overlay.png) repeat 0 0;}
+#colorbox{outline:0;}
+#cboxTopLeft{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -101px 0;}
+#cboxTopRight{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -130px 0;}
+#cboxBottomLeft{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -101px -29px;}
+#cboxBottomRight{width:21px; height:21px; background:url(../images/colorbox/controls.png) no-repeat -130px -29px;}
+#cboxMiddleLeft{width:21px; background:url(../images/colorbox/controls.png) left top repeat-y;}
+#cboxMiddleRight{width:21px; background:url(../images/colorbox/controls.png) right top repeat-y;}
+#cboxTopCenter{height:21px; background:url(../images/colorbox/border.png) 0 0 repeat-x;}
+#cboxBottomCenter{height:21px; background:url(../images/colorbox/border.png) 0 -29px repeat-x;}
+#cboxContent{background:#fff; overflow:hidden;}
+.cboxIframe{background:#fff;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{margin-bottom:28px;}
+#cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+#cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+#cboxLoadingOverlay{background:url(../images/colorbox/loading_background.png) no-repeat center center;}
+#cboxLoadingGraphic{background:url(../images/colorbox/loading.gif) no-repeat center center;}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+#cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+#cboxPrevious{position:absolute; bottom:0; left:0; background:url(../images/colorbox/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxPrevious:hover{background-position:-75px -25px;}
+#cboxNext{position:absolute; bottom:0; left:27px; background:url(../images/colorbox/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxNext:hover{background-position:-50px -25px;}
+#cboxClose{position:absolute; bottom:0; right:0; background:url(../images/colorbox/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+#cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+
