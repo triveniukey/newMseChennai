@@ -309,7 +309,97 @@ Version         : 1.0
 
 
 
+function changePage(page) {
+            const rows = document.querySelectorAll('#staffTable tr[data-index]');
+            const totalEntries = rows.length;
+            let entriesPerPage = 10; // Default to 10 entries per page
 
+            // Update entries per page based on the selected option
+            const entriesSelect = document.getElementById('entriesPerPage');
+            entriesPerPage = parseInt(entriesSelect.value);
+
+            let startIndex, endIndex;
+
+            if (page === 1) {
+                startIndex = 1;
+                endIndex = Math.min(10, totalEntries);
+            } else if (page === 2) {
+                startIndex = 11;
+                endIndex = Math.min(20, totalEntries);
+            } else if (page === 3) {
+                startIndex = 21;
+                endIndex = Math.min(30, totalEntries);
+            } else if (page === 4) {
+                startIndex = 31;
+                endIndex = Math.min(40, totalEntries);
+            } else if (page === 5) {
+                startIndex = 41;
+                endIndex = Math.min(50, totalEntries);
+            } else if (page === 6) {
+                startIndex = 1;
+                endIndex = totalEntries; // Show all 51 entries
+            }
+
+            // Hide all rows
+            rows.forEach(row => row.classList.add('hidden'));
+
+            // Show rows for the selected page
+            rows.forEach(row => {
+                const index = parseInt(row.getAttribute('data-index'));
+                if (index >= startIndex && index <= endIndex) {
+                    row.classList.remove('hidden');
+                }
+            });
+
+            // Update pagination display
+            document.getElementById('startIndex').textContent = startIndex;
+            document.getElementById('endIndex').textContent = endIndex;
+            document.getElementById('totalEntries').textContent = totalEntries;
+
+            // Update current page styling
+            const paginationLinks = document.querySelectorAll('#pagination a');
+            paginationLinks.forEach(link => link.classList.remove('current'));
+            document.querySelector(`#pagination a[onclick="changePage(${page})"]`).classList.add('current');
+
+            // Disable Previous/Next if at boundaries
+            document.querySelector('#pagination a[onclick="changePage(1)"]').style.pointerEvents = page === 1 ? 'none' : 'auto';
+            document.querySelector('#pagination a[onclick="changePage(2)"]').style.pointerEvents = page === 6 ? 'none' : 'auto';
+        }
+
+        // Initial load
+        window.onload = function() {
+            changePage(1); // Start with page 1
+        };
+
+        // Handle entries per page change
+        document.getElementById('entriesPerPage').addEventListener('change', function() {
+            changePage(1); // Reset to page 1 on change
+        });
+
+        // Handle search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#staffTable tr[data-index]');
+            rows.forEach(row => {
+                const name = row.cells[1].textContent.toLowerCase();
+                if (name.includes(searchTerm)) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+            });
+            // Update pagination display
+            const visibleRows = document.querySelectorAll('#staffTable tr[data-index]:not(.hidden)');
+            if (visibleRows.length > 0) {
+                document.getElementById('startIndex').textContent = parseInt(visibleRows[0].getAttribute('data-index'));
+                document.getElementById('endIndex').textContent = parseInt(visibleRows[visibleRows.length - 1].getAttribute('data-index'));
+                document.getElementById('totalEntries').textContent = visibleRows.length;
+            } else {
+                document.getElementById('startIndex').textContent = '0';
+                document.getElementById('endIndex').textContent = '0';
+                document.getElementById('totalEntries').textContent = '0';
+            }
+        });
 
 
 
