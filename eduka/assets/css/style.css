@@ -4553,13 +4553,14 @@ label {
 .team-single-img h4{
   font-size: 20px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 11px;
   margin-left: 20px;
 }
 .team-details{
   padding: 45px;
   background: var(--theme-bg-light);
   border-radius: 50px 50px 50px 0;
+  text-align: justify;
 }
 
 .team-details strong{
@@ -4728,20 +4729,20 @@ label {
             border-collapse: collapse;
         }
         #team-area2 .summary-table th, #team-area2 .summary-table td {
-            border: 1px solid #0066cc;
+            border: 1px solid #01594b;
             padding: 10px;
             text-align: center;
             width: 50%; /* Equal width for two columns */
         }
         #team-area2 .summary-table th {
-            background-color: #0066cc;
+            background-color: #04705c;
             color: #fff;
         }
         #team-area2 .summary-table tr:nth-child(even) {
-            background-color: #b3e0ff;
+            background-color: #e7f9f5;
         }
         #team-area2 .summary-table tr:nth-child(odd) {
-            background-color: #e0f7ff;
+            background-color: #f6f7f8;
         }
         #team-area2 .staff-list {
             background-color: #036351;
@@ -4764,15 +4765,15 @@ label {
             text-align: left;
         }
         #team-area2 th {
-            background-color: #047262;
+            background-color: #036351;
             color: #fff;
             text-align: center;
         }
         #team-area2 tr:nth-child(even) {
-            background-color: #e0f7ff;
+            background-color: #e7f9f5;
         }
         #team-area2 tr:nth-child(odd) {
-            background-color: #b3e0ff;
+            background-color: #fdfdfd;
         }
         #team-area2 .search-container {
             margin-bottom: 20px;
@@ -4788,6 +4789,7 @@ label {
         #team-area2 .pagination {
             text-align: center;
             color: #fafbfb;
+            background-color: #013f30;
             width: 80%; /* Match table width */
             margin-left: auto;
             margin-right: auto;
@@ -4804,12 +4806,12 @@ label {
         #team-area2 .pagination .current {
             font-weight: bold;
             color: #fff;
-            background-color: #035141;
+            background-color:#036351;
             padding: 5px 10px;
             border-radius: 3px;
         }
         #team-area2 .salary-details {
-            color: #f7f8f8;
+            color: #014d34;
             font-weight: bold;
             margin-top: 20px;
             text-align: center;
@@ -4837,19 +4839,25 @@ label {
 
 
 
-        #staff-sectionfour {
+#staff-sectionfour {
     font-family: Arial, sans-serif;
-    background-color: #e6f3ff;
+    /* background-color: #e6f3ff; */
     padding: 20px;
     /* max-width: 800px; */
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    text-align: center
 }
 
 #staff-sectionfour h2 {
     text-align: center;
-    color: #ff0000;
+    color: #076d3d;
     margin-bottom: 10px;
+    border-bottom: 3px solid rgb(252, 174, 18);
+    padding-bottom: 10px;
+  margin-top: 10px;
+    margin-left: 320px;
+    width: 40%;
 }
 
 #staff-sectionfour .direct-link {
@@ -4866,28 +4874,28 @@ label {
 }
 
 #staff-sectionfour .results-table th, #staff-sectionfour .results-table td, #staff-sectionfour .student-table th, #staff-sectionfour .student-table td, #staff-sectionfour .toppers-table th, #staff-sectionfour .toppers-table td {
-    border: 1px solid #000;
+    border: 1px solid #025638;
     padding: 10px;
     text-align: center;
 }
 
 #staff-sectionfour .results-table th, #staff-sectionfour .student-table th, #staff-sectionfour .toppers-table th {
-    background-color: #1a3c54;
+    background-color: #045144;
     color: #fff;
 }
 
 #staff-sectionfour .results-table td {
-    background-color: #e0f7fa;
+    background-color: #e0faef;
 }
 
 #staff-sectionfour h3 {
-    color: #1a3c54;
+    color: #1a5448;
     text-align: center;
     margin-top: 50px;
 }
 
 #staff-sectionfour h4 {
-    background-color: #1a3c54;
+    background-color: #126153;
     color: #fff;
     padding: 10px;
     margin: 10px 0;
@@ -4915,17 +4923,18 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #045144;
 }
 
 #staff-sectionfour .pagination button {
     padding: 5px 10px;
-    background-color: #add8e6;
+    background-color: #03522c;
     border: none;
     cursor: pointer;
 }
 
 #staff-sectionfour .pagination button:hover {
-    background-color: #87ceeb;
+    background-color: #034f34;
 }
 /*====================
 43. Video css 
@@ -5694,8 +5703,9 @@ label {
   /* margin-bottom: 20px; */
   position: relative;
   color: white;
-  font-size: 25px;
-  padding: 5px 30px;
+  font-size: 22px;
+  /* font-weight: 600; */
+  padding: 5px 35px;
   text-align: center;
   /* border-radius: 20px; */
  
@@ -5730,7 +5740,7 @@ label {
 }
 #tl{
   padding: 10px;
-  border-radius: 10px;
+  /* border-radius: 5px; */
   /* width: 100%; */
    background-color: #116E63;
   /* background: linear-gradient(135deg, #ffffff, #f9faf9); Subtle gradient for depth */
@@ -5752,7 +5762,7 @@ label {
 
 
 .terms-content .ptag{
-  margin-top: 60px;
+  margin-top: 45px;
 }
 .terms-content p{
   text-align: justify;
@@ -5878,6 +5888,7 @@ label {
 
 .application-form h3{
   padding-bottom: 15px;
+  color: rgb(247, 174, 3);
   margin-bottom: 30px;
   border-bottom: 1px solid var(--border-info-color);
 }
@@ -5923,6 +5934,7 @@ label {
 
 .application-form .theme-btn{
   margin-top: 30px;
+  width: 100%;
 }
 
 
@@ -6469,13 +6481,23 @@ label {
 .tuition-fee{
   position: relative;
 }
-.tuition-fee h1{
+.tuition-fee h2 {
   text-align: center;
-  margin-top: -50px;
+  margin-top: 30px;
+  width: 75%;
   margin-bottom: 50px;
+  margin-left: 120px;
   border-bottom: 4px solid rgb(255, 179, 0);
 }
-
+.tuition-fee .underline{
+  height: 3px;
+  background-color: rgb(255, 174, 0);
+  width: 33%;
+  position: relative;
+  left: 34%;
+ margin-top: -40px;
+ margin-bottom: 40px;
+}
 .tuition-fee iframe {
             width: 100%;
             height: 800px; /* Adjust height as needed */
@@ -6483,15 +6505,17 @@ label {
         }
 
 
-.tuition-fees h1 {
+.tuition-fees h2 {
     text-align: center;
     color: #fbbd03;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     border-bottom: 3px solid rgb(255, 183, 0);
-    margin-top: -50px;
+    margin-top: 20px;
+    margin-left: 420px;
+    width: 25%;
 }
 .tuition-fees .info-box {
-    background-color: #0b9461;
+    background-color: #0c725f;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -6504,20 +6528,20 @@ label {
     margin-bottom: 20px;
 }
 .tuition-fees th, .tuition-fee td {
-    border: 1px solid #0066cc;
+    border: 1px solid #0d5d59;
     padding: 10px;
     text-align: left;
 }
 .tuition-fees th {
-    background-color: #05869d;
+    background-color: #0d5d59;
     color: #fff;
     text-align: center;
 }
 .tuition-fees tr:nth-child(even) {
-    background-color: #e0f7ff;
+    background-color: #fcfcfc;
 }
 .tuition-fees tr:nth-child(odd) {
-    background-color: #b3e0ff;
+    background-color: #caf7f0;
 }
 .tuition-fees .search-container {
     margin-bottom: 20px;
@@ -6574,21 +6598,24 @@ label {
   top: -30px;
   bottom: -30px;
   width: 80%;
+  /* height: 100%; */
   background: var(--theme-color2);
   border-radius: 50px 50px 50px 0;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   z-index: -1;
 }
 
 .alumni .content-img img{
   border-radius: 50px 50px 50px 0;
-  width: 100%;
+  width: 90%;
 }
 .alumni .content-info{
   /* background-color: red; */
   border-radius: 50px;
   padding: 15px;
-  width: 108%;
+  width: 115%;
+  margin-top: 30px;
+  margin-left: -90px;
   text-align: justify;
   background: linear-gradient(135deg, #ffffff, #f9faf9); /* Subtle gradient for depth */
   box-shadow:  1px 1px 20px 5px rgba(53, 52, 52, 0.3); /* Soft shadow for 3D effect */
@@ -6718,7 +6745,7 @@ label {
 
 .scholarship{
   position: relative;
-  margin-top: -90px;
+  /* margin-top: -90px; */
 }
 
 .scholarship-content img{
@@ -6736,8 +6763,8 @@ label {
 .scholarship-icon img{
   width: 70px;
 }
-.scholarship h3{
-  font-size: 26px;
+.scholarship h2{
+  font-size: 25px;
   border-bottom: 4px solid rgb(255, 196, 0);
   
 }
@@ -6891,7 +6918,7 @@ label {
 }
 
 .footer-logo img {
-  width: 380px;
+  /* width: 400px; */
   background-color: #fff;
   padding: 0px 7px;
   margin-bottom: 25px;
@@ -7326,8 +7353,9 @@ label {
 
 
 #conmen{
-  margin: 40px 40px;
+  margin: 40px 240px;
   text-align: center;
+  border-bottom: 4px solid orange;
 }
 .table-controls {
     display: flex;
@@ -7359,13 +7387,13 @@ label {
   th, td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #ccc;
+    border: 1px solid #12795f;
   }
   tbody tr:nth-child(odd) {
-    background-color: #e6f3ff;
+    background-color: #fbfbfb;
   }
   tbody tr:nth-child(even) {
-    background-color: #d9e6ff;
+    background-color: #d9fff5;
   }
   .pagination {
     display: flex;
@@ -7378,7 +7406,7 @@ label {
     border-radius: 5px;
   }
   .pagination button {
-    background-color: #007bff;
+    background-color: #0b5a3d;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -7386,7 +7414,7 @@ label {
     cursor: pointer;
   }
   .pagination button:hover {
-    background-color: #0056b3;
+    background-color: #03342a;
   }
 
 
@@ -7395,8 +7423,10 @@ label {
 
 
   .achievement-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
+    /* max-width: 800px; */
+    width: 79%;
+    margin: 70px auto;
+    /* margin: 0 auto; */
   }
   .title-header {
     color: #f7bc0d;
@@ -7450,10 +7480,10 @@ label {
     border: 1px solid #ccc;
   }
   .achievement-table tbody tr:nth-child(odd) {
-    background-color: #e0f7fa;
+    background-color: #f6f6f6;
   }
   .achievement-table tbody tr:nth-child(even) {
-    background-color: #b3e5fc;
+    background-color: #c4f4e9;
   }
   .pagination-section {
     display: flex;
@@ -7466,7 +7496,7 @@ label {
     margin-bottom: 40px;
   }
   .prev-btn, .next-btn {
-    background-color: #007bff;
+    background-color: #0c7860;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -7650,3 +7680,55 @@ label {
         .holiday-table span:last-child {
             border-radius: 0 5px 0 0;
         }
+
+
+
+
+        /* Sports Ditails */
+         .sportsdi .header {
+            background-color: #00695c;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .sportsdi .header select,.sportsdi .header input {
+            padding: 5px; 
+        }
+        .sportsdi table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .sportsdi th {
+            background-color: #00695c;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        .sportsdi td {
+            padding: 10px;
+            border-bottom: 1px solid #06614c;
+        }
+        .sportsdi tr:nth-child(even) {
+            background-color: #14624f;
+        }
+        .sportsdi .pagination {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sportsdi .pagination button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            /* background-color: #fff; */
+        }
+        .sportsdi .active {
+            background-color: #00695c;
+            color: white;
+        }
+        /*  */
