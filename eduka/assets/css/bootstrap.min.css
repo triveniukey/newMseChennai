@@ -1588,9 +1588,7 @@ progress {
 
     .col-lg-8 {
         flex: 0 0 auto;
-        width: 62.66666667%;
-
-        margin-left: 38px;
+        width: 66.66666667%
     }
 
     .col-lg-9 {
@@ -4536,8 +4534,7 @@ fieldset:disabled .btn {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-    justify-content: space-between;
-    /* width: 90%; */
+    justify-content: space-between
 }
 
 .navbar-brand {
