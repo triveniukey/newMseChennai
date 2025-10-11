@@ -102,11 +102,11 @@ Table of contents
   --heading-font: 'Yantramanav', sans-serif;
   --theme-color: #116E63;
   --theme-color2: #FDA31B;
-  --theme-color-light: rgb(17, 110, 99, 0.09);
+  /* --theme-color-light: rgb(17, 110, 99, 0.09); */
   --theme-bg-light: #F2F3F5;
-  --body-text-color: #05534f;
+  --body-text-color: #0e2ea4;
   --color-white: #ffffff;
-  --color-dark: #12396b;
+  --color-dark: #0f3e7c;
   --hero-overlay-color: #000000;
   --slider-arrow-bg: rgba(255, 255, 255, 0.2);
   --box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
@@ -654,7 +654,7 @@ label {
 .site-title-tagline {
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 16px;
+  font-size: 23px;
   font-weight: 700;
   /* margin-top: -300px; */
   color: var(--theme-color2);
@@ -669,10 +669,10 @@ label {
 }
 
 .site-title {
-  font-weight: 700;
+  font-weight: 800;
   margin-top: 30px;
   /* text-transform: capitalize; */
-  font-size: 25px;
+  font-size: 40px;
   color:  var(--color-dark);
   margin-top: 10px;
   margin-bottom: 0;
@@ -719,7 +719,7 @@ label {
 ======================*/
 
 .theme-btn {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-white);
   padding: 10px 10px;
   transition: var(--transition);
@@ -794,7 +794,7 @@ label {
   .container-md,
   .container-lg,
   .container-xl {
-    max-width: 1290px;
+    max-width: 1390px;
   }
 }
 
@@ -1816,11 +1816,11 @@ label {
 .about-left{
   margin-right: 20px;
 }
-.about-area #aboutus{
+/* .about-area #aboutus{
   margin-bottom: 20px;
   font-size: 20px;
   margin-top: -30px;
-}
+} */
 .about-img{
   display: flex;
   gap: 30px;
@@ -1828,8 +1828,8 @@ label {
 }
 
 .about-img .img-1{
-  height: 71.1%;
-  width: 110%;
+  height: 72.1%;
+  width: 120%;
   border-radius: 80px 80px 0 80px;
 }
 
@@ -1844,7 +1844,9 @@ label {
 }
 #jiji{
   margin-top: 3px;
-  margin-left: 70px;
+  font-size: 16px;
+  text-align: center;
+  margin-left: -70px;
 }
 .about-img .img-3{
   border-radius: 0 80px 80px 80px;
@@ -1997,7 +1999,7 @@ label {
     /* line-height: 1.6;   Controls spacing between lines, adjust as needed */
     text-align: justify; /* Makes edges even on both sides */
     margin: 0;           /* Remove extra top/bottom spacing */
-    font-size: 13px;
+    font-size: 18px;
 }
 @media all and (max-width: 991px) {
   .about-right {
@@ -2643,6 +2645,7 @@ label {
 } */
 .choose-area p{
   text-align: justify;
+  font-size: 20px;
 }
 .choose-img {
   position: relative;
@@ -2655,7 +2658,7 @@ label {
   content: "";
   position: absolute;
   left: -15px;
-  bottom: -15px;
+  bottom: 15px;
   width: 100%;
   height: 100%;
   border: 5px solid var(--theme-color2);
@@ -2710,9 +2713,11 @@ label {
 .choose-item-info h4{
   color: var(--color-dark);
   margin-bottom: 10px;
-  font-size:18px;
+  font-size:22px;
 }
-
+.choose-item-info p{
+  font-size: 18px;
+}
 .choose-video-wrap{
   height: 100%;
   width: 100%;
@@ -2949,7 +2954,11 @@ label {
 .counter-box .title {
   color: var(--color-white);
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 22px;
+  border-radius: 30px;
+  border-bottom-left-radius: 0%;
+  background-color: orange;
+  padding: 20px;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -3077,14 +3086,16 @@ label {
 
 .cta-content h1{
   color: var(--color-white);
-  font-size: 35px;
+  font-size: 44px;
+  text-align: center;
 }
 
 .cta-content p{
   color: var(--color-white);
   margin-top: 15px;
   margin-bottom: 20px;
-  font-size: 17px;
+  text-align: center;
+  font-size: 24px;
 }
 
 .cta-content p strong{
@@ -3108,8 +3119,8 @@ label {
 .cta-btn .theme-btn{
   background: var(--color-white);
   color: var(--color-dark);
-  padding: 8px 0px;
-  font-size: 13px;
+  padding: 15px 0px;
+  font-size: 17px;
   text-align: center;
   text-decoration: none;
   border: none;
@@ -3369,6 +3380,7 @@ label {
 
 .enroll-form-header p{
   color: var(--color-white);
+  font-size: 20px;
 }
 
 .enroll-form .form-group {
@@ -3377,7 +3389,7 @@ label {
 
 .enroll-form .form-group .form-control {
   padding: 16px 22px;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 12px;
   color: #6C757D;
   background-color: var(--theme-bg-light);
@@ -3401,24 +3413,26 @@ label {
 }
 
 .enroll-form .theme-btn {
-    width: 460px; /* Reduced width for both "Enroll Now" and "Learn More" buttons */
+    width: 570px; /* Reduced width for both "Enroll Now" and "Learn More" buttons */
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
     border: none;
     cursor: pointer;
 }
 .skill-content .theme-btn {
-    width: 550px; /* Reduced width for both "Enroll Now" and "Learn More" buttons */
+    width: 570px; /* Reduced width for both "Enroll Now" and "Learn More" buttons */
     padding: 10px;
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
     border: none;
     cursor: pointer;
 }
-
+.skill-content p{
+  font-size: 19px;
+}
 
 /* ===================
 33. Skill css 
@@ -4992,7 +5006,7 @@ label {
   display: flex;
   justify-content: center;
   border-radius: 5px;
-  height: 350px;
+  height: 400px;
   margin-top: -20px;
   z-index: 100;
 }
@@ -5015,6 +5029,7 @@ label {
 }
 .video-area .about-text{
   text-align: justify;
+  font-size: 19px;
 }
 
 @media all and (max-width: 767px) {
@@ -6972,7 +6987,7 @@ label {
 .copyright .footer-menu li {
   display: inline-block;
   margin-left: 25px;
-  font-size: 16px;
+  font-size: 20px;
 }
 #span span{
   color: rgb(255, 225, 0);
@@ -6991,7 +7006,7 @@ label {
 .copyright .copyright-text {
   color: var(--footer-text-color);
   margin-bottom: 0px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .copyright .copyright-text a {
@@ -7039,6 +7054,7 @@ label {
 .footer-list li a {
   color: var(--color-white);
   transition: var(--transition);
+  font-size: 20px;
 }
 
 .footer-list li a i {
@@ -7054,6 +7070,7 @@ label {
 .footer-widget-box p {
   color: var(--color-white);
   padding-right: 18px;
+  font-size: 19px;
   margin-bottom: 20px;
 }
 
@@ -7085,7 +7102,7 @@ label {
   justify-content: start;
   align-items: center;
   color: var(--footer-text-color);
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 
@@ -7096,10 +7113,11 @@ label {
 }
 
 .footer-contact li i {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   line-height: 30px;
-  font-size: 16px;
+  font-size: 20px;
+  padding-top: 8px;
   margin-right: 15px;
   border-radius: 10px 10px 10px 0;
   background: var(--theme-color2);
