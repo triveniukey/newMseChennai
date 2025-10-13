@@ -1832,7 +1832,10 @@ label {
   width: 120%;
   border-radius: 80px 80px 0 80px;
 }
-
+.about-area .about-text b{
+  color: #035f48;
+  font-weight: 900;
+}
 .about-img .img-2{
   border-radius: 50%;
   border: 2px dashed var(--theme-color2);
@@ -3388,20 +3391,21 @@ label {
 }
 
 .enroll-form .form-group .form-control {
-  padding: 16px 22px;
-  font-size: 20px;
+  padding: 18px 22px;
+  font-size: 23px;
   border-radius: 12px;
-  color: #6C757D;
+  color: #55595c;
   background-color: var(--theme-bg-light);
-  border: none;
+  border: 2px solid rgb(157, 255, 0);
   box-shadow: none
 }
 
 .enroll-form .form-group .form-select{
   padding: 15px 22px;
   background-color: var(--theme-bg-light);
-  color: #6C757D;
-  border: none;
+   color: #55595c;
+  background-color: var(--theme-bg-light);
+  border: 2px solid rgb(157, 255, 0);
   box-shadow: none;
   border-radius: 8px;
 }
