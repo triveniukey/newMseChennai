@@ -151,7 +151,7 @@ body {
 body {
   font-family: var(--body-font);
   font-style: normal;
-  font-size: 16.2px;
+  font-size: 19.5px;
   font-weight: normal;
   color: var(--body-text-color);
   line-height: 1.8;
@@ -435,6 +435,7 @@ label {
 
 .py-120 {
   padding: 120px 0;
+  background: linear-gradient(90deg, #97b4d2 0%, #ffffff 7%, #ffffff 91.5%, #85b6dc 100%);
 }
 
 .pt-120 {
@@ -443,7 +444,7 @@ label {
 
 .pb-120 {
   padding-bottom: 120px;
-}
+}   
 
 .pt-0 {
   padding-top: 0px;
@@ -3403,8 +3404,7 @@ label {
 .enroll-form .form-group .form-select{
   padding: 15px 22px;
   background-color: var(--theme-bg-light);
-   color: #55595c;
-  background-color: var(--theme-bg-light);
+  color: #55595c;
   border: 2px solid rgb(157, 255, 0);
   box-shadow: none;
   border-radius: 8px;
@@ -5735,7 +5735,7 @@ label {
 
   /* background-color: gray; */
   background: linear-gradient(135deg, #ffffff, #f9faf9); /* Subtle gradient for depth */
-  box-shadow:  1px 1px 20px 10px rgba(53, 52, 52, 0.3); /* Soft shadow for 3D effect */
+  box-shadow:  1px 1px 20px 10px rgba(40, 39, 39, 0.3); /* Soft shadow for 3D effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }
 
@@ -5743,7 +5743,7 @@ label {
   /* margin-bottom: 20px; */
   position: relative;
   color: white;
-  font-size: 22px;
+  font-size: 29px;
   /* font-weight: 600; */
   padding: 5px 35px;
   text-align: center;

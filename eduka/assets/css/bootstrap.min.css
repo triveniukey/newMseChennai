@@ -433,7 +433,7 @@ kbd {
     color: var(--bs-body-bg);
     background-color: var(--bs-body-color);
     border-radius: .25rem
-}
+} 
 
 kbd kbd {
     padding: 0;
@@ -1103,6 +1103,7 @@ progress {
         width: 33.33333333%
     }
 
+    
     .row-cols-sm-4>* {
         flex: 0 0 auto;
         width: 25%
