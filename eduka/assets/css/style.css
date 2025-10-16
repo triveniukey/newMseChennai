@@ -795,7 +795,7 @@ label {
   .container-md,
   .container-lg,
   .container-xl {
-    max-width: 1390px;
+    max-width: 1490px;
   }
 }
 
@@ -1006,18 +1006,11 @@ label {
 }
 
 .navbar-brand {
-  margin-right: -330px;
+  margin-right: -150px;
+  margin-left: -100px;
 }
 
-.navbar-brand img {
-  /* width: 700px; */
-  /* width: 100%; */
-  margin-left: -200px;
-      width: 1000px;
-    /* width: 100%; */
-    margin-left: -210px;
-    /* margin-right: 231px; */
-}
+
 
 .navbar .dropdown-toggle::after {
   display: inline-block;
@@ -1030,6 +1023,7 @@ label {
 
   font-size: 10px;
 }
+
 
 
 @media all and (max-width: 1199px) {
@@ -1048,9 +1042,9 @@ label {
 
 @media all and (min-width: 992px) {
   .navbar .nav-item .nav-link {
-    margin-right: 20px;
-    padding: 30px 0 30px 0;
-    font-size: 22px;
+    margin-right: 19px;
+    padding: 15px 0 0px 0;
+    font-size: 18px;
     font-weight: 600;
     color:  var(--color-dark);
     /* color: #015c4d; */
@@ -1168,7 +1162,7 @@ label {
     margin-left: 10px;
   }
    .nav-right  .nav-right-btn a{
-    font-size: 15px;
+    font-size: 13px;
    }
   .nav-right-link {
     position: relative;
@@ -1544,6 +1538,181 @@ label {
   background: var(--theme-color);
   color: var(--color-white);
 }
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1940px) {
+  /* Logo size thoda chhota ya adjust karna */
+  .navbar-brand img {
+    width: 360px; /* 125% screen ke liye */
+  }
+
+  /* Navbar links font adjust */
+  .navbar-nav .nav-link {
+    font-size: 18px; /* slightly bada */
+    padding: 12px 18px;
+  }
+
+  /* Header top contact font thoda adjust */
+  .header-top-contact ul li a {
+    font-size: 18px;
+  }
+
+  /* Social icons size */
+  .header-top-social a {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  /* Dropdown items font */
+  .dropdown-menu .dropdown-item {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .header-top {
+    padding: 12px 0;
+  }
+
+  .header-top-contact ul li a {
+    font-size: 17px;
+  }
+
+  .header-top-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  /* .navbar {
+    padding: 18px 0;
+  } */
+
+  .navbar-brand img {
+    width: 280px;
+    /* margin-left: -100px; */
+  }
+
+  /* 👇 nav-link ka size yahan kam kiya gaya hai */
+  .navbar-nav .nav-link {
+    font-size: 1px;
+    padding: 10px 14px;
+  }
+
+  .dropdown-menu {
+    font-size: 1px;
+  }
+
+  .nav-right-btn a {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+}
+
+
+
+/* Laptops & Tablets Landscape (992px - 1199px) */
+@media (max-width: 1199px) {
+  .header-top-contact ul li a {
+    font-size: 14px;
+  }
+
+  .navbar-brand img {
+    width: 300px;
+  }
+}
+
+/* Tablets Portrait (768px - 991px) */
+@media (max-width: 991px) {
+  .header-top {
+    display: none;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-brand img {
+    width: 180px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+    font-size: 22px;
+  }
+
+  .nav-right {
+    margin-top: 15px;
+  }
+
+  .theme-btn {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+}
+
+/* Mobile Devices (Below 767px) */
+@media (max-width: 767px) {
+  .navbar-brand img {
+    width: 150px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .header-top {
+    display: none;
+  }
+
+  .nav-right {
+    text-align: center;
+    width: 100%;
+  }
+
+  .theme-btn {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+/* Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+  .navbar-brand img {
+    width: 130px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 13px;
+  }
+}
+
+
+
+
 
 
 
@@ -2298,7 +2467,7 @@ label {
 
 .fa-negative{
   margin-top: -150px;
-  margin-left: 400px;
+  /* margin-left: 400px; */
 }
 
 .feature-item {
@@ -2331,7 +2500,7 @@ label {
   text-align: center;
   color: var(--color-white);
   font-size: 40px;
-  margin-left: 60px;
+  margin-left: 100px;
   background-color: rgb(255, 115, 0);
   /* background: var(--theme-color); */
   margin-bottom: 25px;
@@ -5793,18 +5962,6 @@ label {
 #tl .let{
   font-style: italic;
 }
-/* .terms-content .tot{
-    padding-top: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.terms-content .let{
-    padding-bottom: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-} */
-
-
 
 .terms-content .ptag{
   margin-top: 45px;
