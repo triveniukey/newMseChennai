@@ -2132,7 +2132,8 @@ label {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 30px;
+  
+  margin-top:5px;
 }
 
 .about-phone{
@@ -2172,10 +2173,10 @@ label {
 }
 
 .about-right .about-text {
-    /* line-height: 1.6;   Controls spacing between lines, adjust as needed */
+    /* line-height: 1.6;    */
     text-align: justify; /* Makes edges even on both sides */
     margin: 0;           /* Remove extra top/bottom spacing */
-    font-size: 18px;
+    font-size: 17px;
 }
 @media all and (max-width: 991px) {
   .about-right {
@@ -2194,6 +2195,7 @@ label {
   }
   .about-right .about-text {
     font-size: 18px;
+    line-height: 1.6;
   }
   .about-experience b {
     font-size: 20px;
