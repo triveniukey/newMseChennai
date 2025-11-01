@@ -525,7 +525,7 @@ select:disabled {
 [type=reset],
 [type=submit],
 button {
-    -webkit-appearance: button
+    -webkit-appearance: button;
 }
 
 [type=button]:not(:disabled),
@@ -9501,9 +9501,12 @@ fieldset:disabled .btn {
 
 .text-white {
     --bs-text-opacity: 1;
-    line-height: 27px;
+    line-height: 25px;
+    word-spacing: -1px;
     text-align: justify;
-    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    
 }
 
 .text-body {

@@ -149,8 +149,8 @@ body {
 }
 
 body {
-  /* font-family: var(--body-font); */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: var(--body-font);
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
   font-style: normal;
   /* font-size: 19.5px; */
   font-weight: normal;
@@ -913,7 +913,7 @@ label {
   height: 40px;
   /* line-height: 35px; */
   color: var(--color-white);
-  font-size: 23px;
+  font-size: 25px;
   background: var(--theme-color);
   text-align: center;
   margin-left: 5px;
@@ -1047,8 +1047,8 @@ label {
   .navbar .nav-item .nav-link {
     margin-right: 19px;
     padding: 14px 0 0px 0;
-    font-size: 17px;
-    font-weight: 900;
+    font-size: 16.3px;
+    font-weight: 800;
     color:  var(--color-dark);
     /* color: #015c4d; */
     text-transform: capitalize;
@@ -1572,7 +1572,7 @@ label {
   .header-top-social a {
     width: 38px;
     height: 38px;
-    font-size: 22px;
+    font-size: 25px;
   }
 
   /* Dropdown items font */
@@ -2724,15 +2724,16 @@ label {
   text-align: justify;
   text-justify: inter-word;
   word-spacing: 0px;
-  letter-spacing: 0px;
+  letter-spacing:  -1.1px;
   hyphens: auto;          /* breaks long words naturally */
   overflow-wrap: break-word;
 }
 .feature-content p {
   text-align: justify;
-  word-spacing: -1px;
+  word-spacing: 0.5px;
   line-height: 1.35;
   hyphens: auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* ====== RESPONSIVE TUNING (for zoom range 80%–125%) ====== */
@@ -3107,7 +3108,8 @@ label {
   box-shadow: var(--box-shadow);
   padding: 15px 15px 15px 0;
   overflow: hidden;
-  line-height: 24px;
+  line-height: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
  #niche{
   margin-top: 30px;
@@ -3723,7 +3725,7 @@ label {
 
   .cta-btn .theme-btn {
     font-size: 17px;
-    padding: 5px 0;
+    padding: 12px 0;
   }
 }
 
@@ -4010,8 +4012,8 @@ label {
 
 .enroll-form .theme-btn {
     width: 510px; /* Reduced width for both "Enroll Now" and "Learn More" buttons */
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 18px;
     text-align: center;
     text-decoration: none;
     border: none;
@@ -4019,8 +4021,8 @@ label {
 }
 .skill-content .theme-btn {
     width: 570px; /* Reduced width for both "Enroll Now" and "Learn More" buttons */
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 18px;
     text-align: center;
     text-decoration: none;
     border: none;
@@ -5678,7 +5680,7 @@ label {
   display: flex;
   justify-content: center;
   border-radius: 5px;
-  height: 360px;
+  height: 340px;
   margin-top: -20px;
   z-index: 100;
 }
@@ -5702,12 +5704,13 @@ label {
 .video-area .about-text {
   text-align: justify;
   text-justify: inter-word;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 25px;
-  word-spacing: 0px;       /* remove extra gaps */
-  letter-spacing: 0px;
+  word-spacing: 0px;      
+  letter-spacing: -0.3px;
   hyphens: auto;           /* break long words smoothly */
   overflow-wrap: break-word;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
