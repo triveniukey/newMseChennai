@@ -193,7 +193,7 @@ Version         : 1.0
 
     // preloader
     $(window).on('load', function () {
-        $(".preloader").fadeOut("slow");
+        $(".preloader").fadeOut(100);
     });
 
 
@@ -222,6 +222,73 @@ Version         : 1.0
         preloader: false,
         fixedContentPos: false
     });
+
+
+//  captcha code
+    const refreshBtn = document.getElementById('refresh');
+const capDiv = document.getElementById('cap');
+const input = document.getElementById('in');
+const verifyBtn = document.getElementById('verify');
+const submitBtn = document.getElementById('submit');
+const res = document.getElementById('res');
+
+let cap = '';
+
+// Robust generate function
+function gen() {
+    if (!capDiv) return;
+    cap = '';
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for (let i = 0; i < 6; i++) {
+        cap += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    capDiv.textContent = cap; // Use textContent for safety
+    capDiv.style.display = 'block'; // Force show
+    if (input) input.value = '';
+    if (res) {
+        res.textContent = '';
+        res.className = '';
+    }
+    console.log('New Captcha:', cap); // Debug: Browser console mein dekho
+}
+
+// Click events
+if (refreshBtn) refreshBtn.onclick = gen;
+if (capDiv) capDiv.onclick = gen;
+
+// Verify
+if (verifyBtn) {
+    verifyBtn.onclick = function() {
+        if (input.value.trim() === cap) {
+            res.textContent = '✅ Captcha Verified!';
+            res.className = 'success';
+        } else {
+            res.textContent = '❌ Wrong! Try Again.';
+            res.className = 'error';
+            gen();
+        }
+    };
+}
+
+// Submit check
+if (submitBtn) {
+    submitBtn.onclick = function() {
+        if (res.textContent.includes('Verified')) {
+            alert('Form Submitted Successfully!');
+            // Yahan real form submit code daalo
+        } else {
+            alert('Pehle Captcha Verify Karo!');
+        }
+    };
+}
+
+// Load pe generate (delay se force)
+window.onload = function() {
+    setTimeout(gen, 100); // Force after load
+};
+gen();
+
+    // done
 
 
 
@@ -400,6 +467,7 @@ function changePage(page) {
                 document.getElementById('totalEntries').textContent = '0';
             }
         });
+
 
 
 

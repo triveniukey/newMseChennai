@@ -9501,7 +9501,7 @@ fieldset:disabled .btn {
 
 .text-white {
     --bs-text-opacity: 1;
-    line-height: 25px;
+    line-height: 26px;
     word-spacing: -1px;
     text-align: justify;
     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
