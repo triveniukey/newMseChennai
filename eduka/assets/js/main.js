@@ -190,6 +190,8 @@ Version         : 1.0
         }
     });
 
+    
+
 
     // preloader
     $(window).on('load', function () {
@@ -224,6 +226,10 @@ Version         : 1.0
     });
 
 
+
+
+
+    
 //  captcha code
     const refreshBtn = document.getElementById('refresh');
 const capDiv = document.getElementById('cap');

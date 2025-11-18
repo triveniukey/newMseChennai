@@ -783,13 +783,14 @@ progress {
 .container-sm,
 .container-xl,
 .container-xxl {
-    --bs-gutter-x: 200px;
+    --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    
 }
 
 @media (min-width:576px) {
@@ -4362,10 +4363,11 @@ fieldset:disabled .btn {
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: var(--bs-nav-link-font-size);
     font-weight: var(--bs-nav-link-font-weight);
-    color: var(--bs-nav-link-color);
+    /* color: var(--bs-nav-link-color); */
     text-decoration: none;
     background: 0 0;
     border: 0;
+    font-weight: 800;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
 }
 
@@ -9502,7 +9504,7 @@ fieldset:disabled .btn {
 .text-white {
     --bs-text-opacity: 1;
     line-height: 26px;
-    word-spacing: -1px;
+    word-spacing: -1.2px;
     text-align: justify;
     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
