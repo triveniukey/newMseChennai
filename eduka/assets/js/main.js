@@ -293,7 +293,22 @@ window.onload = function() {
     setTimeout(gen, 100); // Force after load
 };
 gen();
+    const buttons = document.querySelectorAll('.menu-button');
+        const sections = document.querySelectorAll('.section');
+        const title = document.getElementById('title-text');
 
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+
+                btn.classList.add('active');
+                const sectionId = btn.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+
+                title.textContent = btn.textContent;
+            });
+        });
     // done
 
 

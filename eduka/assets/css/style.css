@@ -1360,6 +1360,55 @@ label {
     right: -8px;
     top: -1px;
   }
+  
+}
+@media (max-width: 780px){
+  .navbar-nav {
+    margin-left: 0;
+  }
+
+  .navbar .nav-item .nav-link {
+    font-size: 16px;
+    padding: 10px 0;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+
+  .navbar .nav-item .dropdown-menu {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.03);
+    border: none;
+    border-top: 2px solid var(--theme-color2);
+    margin-top: 5px;
+    box-shadow: none;
+  }
+
+  .navbar .nav-item .dropdown-menu .dropdown-item {
+    font-size: 15px;
+    padding: 8px 15px;
+    color: var(--color-dark);
+    font-weight: 600;
+  }
+
+  .navbar .nav-item .dropdown-menu .dropdown-item:hover {
+    color: var(--theme-color);
+    padding-left: 20px;
+    background: transparent;
+  }
+
+  .navbar .nav-item .dropdown-menu .dropdown-item::before {
+    content: "→";
+    left: 5px;
+    color: var(--theme-color2);
+  }
+
+  .dropdown-toggle::after {
+    font-size: 14px;
+  }
 }
 /*============================
 13. Mega menu
@@ -1483,9 +1532,8 @@ label {
 } */
 
 /* Tablet Responsive (768px - 991px) */
-@media all and (max-width: 991px) and (min-width: 768px) {
+/* @media all and (max-width: 991px) and (min-width: 768px) {
 
-  /* Header Top - Tablet */
   .header-top {
     padding: 8px 0;
   }
@@ -1519,7 +1567,6 @@ label {
     margin-left: 4px;
   }
 
-  /* Navbar - Tablet */
   .navbar-brand {
     margin-right: 0;
     margin-left: 0;
@@ -1576,7 +1623,7 @@ label {
     top: -1px;
   }
 
-  /* Hide mega menu on tablet */
+
   .nav-item.mega-menu .dropdown-menu {
     width: 100%;
     left: 0;
@@ -1595,7 +1642,7 @@ label {
   .menu-about-logo img {
     width: 150px;
   }
-}
+} */
 
 /* Mobile Responsive (max-width: 767px) */
 @media all and (max-width: 767px) {
@@ -2459,7 +2506,7 @@ label {
   margin-top: 3px;
   font-size: 16px;
   text-align: center;
-  margin-left: -70px;
+  margin-left: -50px;
 }
 
 .about-img .img-3 {
@@ -2632,8 +2679,13 @@ label {
   .about-item {
     margin-top: 30px;
   }
+  
 }
-
+@media (max-width: 450px){
+  #jiji{
+    margin-left: -0px;
+  }
+}
 @media (min-width: 1800px) {
   .about-img .img-1 {
     width: 115%;
@@ -2723,9 +2775,9 @@ label {
     border-radius: 40px;
   }
 
-  #jiji {
+  /* #jiji {
     margin-left: 0;
-  }
+  } */
 
   #chaimee {
     margin-left: 0;
@@ -2803,12 +2855,12 @@ label {
   .site-heading .site-title {
     font-size: 26px;
   }
-
+/* 
   #jiji {
     font-size: 13px;
     margin-left: -50px;
     margin-top: 5px;
-  }
+  } */
 
   #chaimee {
     margin-top: 20px;
@@ -2842,12 +2894,12 @@ label {
   .site-heading .site-title {
     font-size: 25px;
   }
-
+/* 
   #jiji {
     font-size: 15px;
     margin-left: -50px;
-    /* margin-top: 5px; */
-  }
+    margin-top: 5px;
+  } */
 
   #chaimee {
     /* margin-top: 20px; */
@@ -3571,7 +3623,7 @@ label {
 .choose-img::before {
   content: "";
   position: absolute;
-  left: -15px;
+  left: -8px;
   bottom: 15px;
   width: 100%;
   height: 100%;
@@ -3706,13 +3758,6 @@ label {
 }
 
 /* 💻 Larger zoom fix (110% - 125%) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .choose-area .text-white {
-    font-size: 1px;
-    line-height: 30px;
-  }
-
-}
 
 /* 💻 For very large screens (1400px and above) */
 @media (min-width: 1400px) {
@@ -5905,7 +5950,191 @@ label {
 
 
 
+/* ==================== RESPONSIVE CSS ONLY ==================== */
 
+@media (max-width: 1200px) {
+    #team-area2 .summary-table,
+    #staffTable {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .team-single-img img {
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .team-details {
+        padding: 30px 20px;
+        border-radius: 30px 30px 30px 0;
+    }
+    
+    #team-area2 h2 {
+        margin-left: 0;
+        width: 100%;
+        font-size: 24px;
+    }
+    
+    #team-area2 .summary-table {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .row.align-items-center {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-single-img,
+    .team-details {
+        width: 100%;
+    }
+    
+    .team-single-img h4 {
+        font-size: 18px;
+    }
+    
+    /* Table responsive - horizontal scroll */
+    #team-area2 .summary-table,
+    #staffTable {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #staffTable th,
+    #staffTable td {
+        min-width: 120px;
+        font-size: 14px;
+    }
+    
+    #team-area2 .search-container {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #team-area2 .search-container select,
+    #team-area2 .search-container input {
+        margin: 10px 5px;
+        width: 45%;
+    }
+    
+   .pagination {
+        font-size: 14px;
+        gap: 6px 8px;
+        padding: 10px 8px;
+    }
+    
+    .pagination a {
+        padding: 7px 10px;
+        font-size: 14px;
+        min-width: 32px;
+    }
+    
+    .pagination a:first-child,
+    .pagination a:last-child {
+        padding: 8px 14px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-details h4 {
+        font-size: 20px;
+    }
+    
+    .team-details p {
+        font-size: 14px;
+    }
+    
+    #tl h3.tot {
+        font-size: 22px;
+    }
+    
+    #tl h3.let {
+        font-size: 16px;
+    }
+    
+    #team-area2 h2 {
+        font-size: 20px;
+    }
+    
+    #staffTable th,
+    #staffTable td {
+        padding: 8px 5px;
+        font-size: 13px;
+    }
+    
+    #team-area2 .summary-table th,
+    #team-area2 .summary-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .salary-details,
+    .payment-mode {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .pagination {
+        padding: 10px 0;
+    }
+    
+    .pagination a {
+        display: inline-block;
+        margin: 3px;
+        font-size: 13px;
+    }
+}
+
+/* Extra small devices - better stacking */
+@media (max-width: 480px) {
+    .team-single-img img {
+        border-radius: 15px;
+    }
+    
+    .team-details {
+        border-radius: 20px;
+        padding: 20px 15px;
+    }
+    
+    #staffTable,
+    #team-area2 .summary-table {
+        font-size: 12px;
+    }
+    
+    #staffTable th,
+    #staffTable td {
+        min-width: 100px;
+    }
+    .pagination {
+        font-size: 13px;
+        gap: 4px 6px;
+        padding: 10px 5px;
+    }
+    
+    .pagination a {
+        padding: 6px 8px;
+        font-size: 13px;
+        min-width: 30px;
+    }
+    
+    /* Chhoti screen par page numbers ko wrap hone do */
+    .pagination a:not(:first-child):not(:last-child) {
+        padding: 6px 10px;
+    }
+    
+    .pagination a:first-child,
+    .pagination a:last-child {
+        padding: 7px 12px !important;
+        font-size: 13px;
+    }
+}
 
 /* staff-sectionfour */
 
@@ -6018,7 +6247,92 @@ label {
 #staff-sectionfour .pagination button:hover {
   background-color: #034f34;
 }
+@media (max-width: 768px) {
+    
+    #staff-sectionfour h2 {
+        margin-left: 0 !important;
+        width: 90% !important;
+        margin: 20px auto !important;
+        text-align: center;
+        font-size: 24px;
+    }
 
+    #staff-sectionfour .direct-link {
+        float: none;
+        display: block;
+        text-align: center;
+        margin: 15px auto;
+        font-size: 16px;
+    }
+
+    /* Tables ko horizontal scroll kar diya — content cut nahi hoga */
+    #staff-sectionfour .results-table,
+    #staff-sectionfour .student-table,
+    #staff-sectionfour .toppers-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #staff-sectionfour .results-table th,
+    #staff-sectionfour .results-table td,
+    #staff-sectionfour .student-table th,
+    #staff-sectionfour .student-table td,
+    #staff-sectionfour .toppers-table th,
+    #staff-sectionfour .toppers-table td {
+        min-width: 100px;
+        font-size: 14px;
+        padding: 8px 6px;
+    }
+
+    #staff-sectionfour .filter-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #staff-sectionfour .filter-section select,
+    #staff-sectionfour .filter-section input {
+        width: 85%;
+        margin: 8px 0;
+    }
+
+    #staff-sectionfour .pagination {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    #staff-sectionfour .pagination button {
+        width: 120px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #staff-sectionfour h2 {
+        font-size: 21px;
+        width: 95%;
+    }
+
+    #staff-sectionfour .results-table th,
+    #staff-sectionfour .results-table td,
+    #staff-sectionfour .student-table th,
+    #staff-sectionfour .student-table td,
+    #staff-sectionfour .toppers-table th,
+    #staff-sectionfour .toppers-table td {
+        font-size: 13px;
+        min-width: 85px;
+        padding: 6px 4px;
+    }
+
+    #staff-sectionfour .filter-section select,
+    #staff-sectionfour .filter-section input {
+        width: 100%;
+    }
+}
 /*====================
 43. Video css 
 ======================*/
@@ -7083,14 +7397,15 @@ h5 {
 }
 
 .application-form {
-  padding: 40px;
+  padding: 20px;
   border-radius: 10px;
   background: var(--color-white);
   box-shadow: var(--box-shadow);
 }
 
-.application-form h3 {
+.application-form h4 {
   padding-bottom: 15px;
+  font-size: 30px;
   color: rgb(247, 174, 3);
   margin-bottom: 30px;
   border-bottom: 1px solid var(--border-info-color);
@@ -7693,6 +8008,30 @@ h5 {
   margin-left: 120px;
   border-bottom: 4px solid rgb(255, 179, 0);
 }
+@media (max-width: 450px) {
+    .tuition-fee h2 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 92%;
+        font-size: 20px;
+        padding-bottom: 8px;
+        border-bottom-width: 3px;
+    }
+}
+
+@media (max-width: 375px) {
+    .tuition-fee h2 {
+        font-size: 19px;
+        width: 94%;
+    }
+}
+
+@media (max-width: 320px) {
+    .tuition-fee h2 {
+        font-size: 18px;
+        width: 96%;
+    }
+}
 
 .tuition-fee .underline {
   height: 3px;
@@ -7809,6 +8148,7 @@ h5 {
   margin-right: 30px;
   position: relative;
   z-index: 1;
+  margin-top: 30px;
 }
 
 .alumni .content-img::before {
@@ -7989,7 +8329,11 @@ h5 {
 
 .scholarship-content img {
   border-radius: 20px;
-  margin-left: 380px;
+  /* margin-left: 380px; */
+  transform: translate(-50%,-0%);
+  top: 50%;
+  left: 50%;
+  position: relative;
   height: 60%;
 
   /* text-align: center; */
@@ -8363,7 +8707,12 @@ h5 {
 .subscribe-form .theme-btn:hover::after {
   border-color: var(--theme-color2);
 }
-
+@media (min-width: 1400px){
+  #sitemap{
+    /* margin-left: 100px; */
+    margin-top: -20px;
+  }
+}
 
 /*====================
 71. Home 2
@@ -8561,11 +8910,15 @@ h5 {
 
 
 #conmen {
-  margin: 40px 240px;
+  margin: 40px 0px;
   text-align: center;
   border-bottom: 4px solid orange;
 }
-
+@media (max-width: 380px){
+  .search-container input {
+    width: 130px;
+  }
+}
 .table-controls {
   display: flex;
   justify-content: space-between;
@@ -8638,8 +8991,127 @@ tbody tr:nth-child(even) {
 }
 
 
+.sports-header-new {
+    background: #116862;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;  
+    margin-top: 20px;                  /* 100% width guaranteed */
+    box-sizing: border-box;
+}
+
+.sports-main-title {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mobile responsive sirf header ke liye */
+@media (max-width: 768px) {
+    .sports-main-title {
+        font-size: 17px;
+        padding: 18px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sports-main-title {
+        font-size: 12px;
+        padding: 16px 12px;
+    }
+}
+/* ==================== SPORTS ACHIEVEMENTS PAGE - FULLY RESPONSIVE (768px & below) ==================== */
 
 
+@media (max-width: 768px) {
+    /* Green heading ko full width aur mobile friendly */
+    
+    /* Table horizontal scroll on mobile */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        margin: 20px 0;
+    }
+
+    th, td {
+        min-width: 110px;
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+
+    thead {
+        font-size: 15px;
+    }
+
+    /* Pagination mobile par stacked aur touch-friendly */
+    .pagination {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    #pageInfo {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .pagination button {
+        padding: 12px 18px !important;
+        font-size: 15px;
+        min-width: 100px;
+        border-radius: 8px;
+    }
+
+    .pagination button.active {
+        background-color: #0b5a3d !important;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 480px) {
+  
+
+    th, td {
+        font-size: 13px;
+        min-width: 95px;
+        padding: 10px 6px;
+    }
+
+    .header select,
+    .header input {
+        width: 100%;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    .pagination button {
+        width: 90px;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header span {
+        font-size: 14px;
+        padding: 14px 12px !important;
+    }
+
+    th, td {
+        font-size: 12.5px;
+        min-width: 85px;
+    }
+}
 
 
 .achievement-wrapper {
@@ -8748,6 +9220,10 @@ tbody tr:nth-child(even) {
 .page-number {
   margin: 0 5px;
 }
+
+
+
+
 
 /* inside school */
 
@@ -8892,8 +9368,6 @@ tbody tr:nth-child(even) {
 
 /*  */
 
-
-
 .headerrr {
   background-color: #1a6060;
   color: #d4ff00;
@@ -8901,12 +9375,35 @@ tbody tr:nth-child(even) {
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerrr h2 {
   margin: 0;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  line-height: 1.3;
+}
+
+/* Responsive up to 768px */
+@media (max-width: 768px) {
+  .headerrr {
+    padding: 8px;
+  }
+
+  .headerrr h2 {
+    font-size: 1.2em;
+  }
+}
+
+/* Extra responsive for 480px */
+@media (max-width: 480px) {
+  .headerrr h2 {
+    font-size: 1em;
+  }
 }
 
 .holiday-table {
@@ -9165,12 +9662,150 @@ tbody tr:nth-child(even) {
 
 
 
+/* FEE STRUCTURE 2025-2026 - MODERN & RESPONSIVE CSS */
+/* ============== FEE STRUCTURE - BILKUL CENTER MEIN ============== */
+.fee-structure-section {
+    padding: 20px 20px;
+    /* background: linear-gradient(135deg, #f5f9ff 0%, #e3f2fd 100%); */
+    /* min-height: 40vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* Horizontally center */
+    justify-content: center;    /* Vertically center */
+}
+
+.fee-main-title {
+    text-align: center;
+    font-size: 32px;
+    color: #0d47a1;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.year-highlight::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 5px;
+    background: linear-gradient(90deg, #d81b60, #ff4081);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.fee-table-wrapper {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;                     /* Perfect horizontal center */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(13, 71, 161, 0.2);
+    background: white;
+}
+
+.fee-table-modern {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.fee-table-modern thead {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+}
+
+.fee-table-modern th {
+    padding: 22px 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.fee-table-modern th:first-child { border-radius: 16px 0 0 0; }
+.fee-table-modern th:last-child { border-radius: 0 16px 0 0; }
+
+.fee-table-modern td {
+    padding: 10px 25px;
+    text-align: left;
+    background: #e8f4fc;
+    color: #1a237e;
+    font-weight: 700;
+    border-bottom: 1px solid #bbdefb;
+}
+
+.fee-table-modern tbody tr:hover td {
+    background: #bbdefb;
+    transition: 0.3s;
+}
+
+.fee-table-modern td:last-child {
+    text-align: right;
+    font-weight: 700;
+    color: #f56d0c;
+    font-size: 20px;
+}
+
+.fee-note {
+    text-align: center;
+    font-size: 16px;
+    color: #d32f2f;
+    font-style: italic;
+    margin-top: 35px;
+    background: #fff3e0;
+    padding: 18px;
+    border-radius: 12px;
+    max-width: 650px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffccbc;
+}
+
+/* RESPONSIVE - Mobile par bhi perfect center */
+@media (max-width: 768px) {
+    .fee-main-title {
+        font-size: 26px;
+        padding: 0 15px;
+    }
+    .fee-table-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .fee-table-modern th,
+    .fee-table-modern td {
+        padding: 15px 12px;
+        font-size: 16px;
+    }
+    .fee-table-modern td:last-child {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fee-main-title {
+        font-size: 23px;
+    }
+    .fee-table-wrapper {
+        overflow-x: auto;
+        border-radius: 12px;
+    }
+    .fee-table-modern {
+        min-width: 560px;
+    }
+}
 
 
 
 
-
-
+.soon-text {
+  text-align: center;
+            font-size: 48px;
+            font-weight: 800;
+            color: #ff6f00;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
 /* Main Container */
         #exam-schedule-container {
             max-width: 1100px;
@@ -9372,13 +10007,17 @@ tbody tr:nth-child(even) {
             background: white;
             color: #333;
         }
-
+        @media (min-width: 320px){
+          .tc-search input{
+            width: 150px;
+          }
+        }
         .tc-length select:focus, .tc-search input:focus {
             outline: none;
             border-color: #006064;
             box-shadow: 0 0 5px rgba(0,96,100,0.3);
         }
-
+        
         /* Table */
         .tc-table-wrapper {
             overflow-x: auto;
@@ -9498,4 +10137,106 @@ tbody tr:nth-child(even) {
                 font-size: 18px;
                 padding: 14px;
             }
+        }
+
+.gallery-item .play-btn{
+  margin-top: 35%;
+}
+
+
+
+ .top-menu {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            padding: 15px 0;
+            text-align: center;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .menu-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 40px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .menu-button:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .menu-button.active {
+            border-bottom: 5px solid white;
+        }
+
+        /* Main Title */
+        .main-title {
+            text-align: center;
+            padding: 15px;
+            font-size: 32px;
+            color: white;
+            border-radius: 50px;
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            margin-bottom: 30px;
+        }
+
+        /* Photo Grid */
+        .photo-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* Photo Box */
+        .photo-box {
+            position: relative;
+            width: 380px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            transition: transform 0.4s;
+        }
+        .photo-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Photo Text */
+        .photo-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            color: white;
+            padding: 50px 20px 20px;
+            text-align: center;
+        }
+        .photo-text h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        /* Big Number */
+        .number-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 130px;
+            font-weight: bold;
+            color: rgba(255,255,255,0.15);
+        }
+
+        /* Hide/Show Sections */
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
         }
