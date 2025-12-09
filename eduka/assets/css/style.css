@@ -2853,7 +2853,7 @@ label {
   }
 
   .site-heading .site-title {
-    font-size: 26px;
+    font-size: 34px;
   }
 /* 
   #jiji {
@@ -2891,9 +2891,9 @@ label {
     font-size: 15px;
   }
 
-  .site-heading .site-title {
+  /* .site-heading .site-title {
     font-size: 25px;
-  }
+  } */
 /* 
   #jiji {
     font-size: 15px;
@@ -5355,6 +5355,9 @@ label {
 .contact-form .form-group {
   margin-bottom: 25px;
 }
+.contact-form .form-group input,.contact-form .form-group textarea{
+  border: 2px solid rgb(157, 255, 0);
+}
 
 .contact-form .form-group .form-control {
   padding: 15px 20px;
@@ -5452,8 +5455,67 @@ label {
     margin-bottom: 50px;
   }
 }
+.contact-info {
+    position: relative;
+    padding: 65px 20px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: var(--box-shadow);
+    border-radius: 50px 50px 50px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* TOP BORDER – bilkul photo jaisi */
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 18px;
+    background: linear-gradient(180deg, #00bfa5, #004d40);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 
+        0 10px 20px rgba(0, 77, 64, 0.45),
+        0 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 9;
+}
+
+.contact-info::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);   /* top wali ko ulta kar diya */
+    width: 190px;
+    height: 20px;
+    background: linear-gradient(180deg, #00bfa5, #004d40);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 
+        0 10px 20px rgba(0, 77, 64, 0.45),
+        0 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 9;
+}
 
 
+.contact-wrapper {
+    position: relative;
+    background: #ffffff;
+    border-radius: 30px;
+    /* padding: 60px 50px; */
+    /* margin: 80px 0; */
+    background-clip: padding-box;
+    border: 12px solid transparent;
+    background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, #00bfa5 0%, #004d40 50%, #00bfa5 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15), 0 0 40px rgba(0,191,165,0.3);
+}
 
 
 /*===================
@@ -5786,6 +5848,7 @@ label {
 
 #team-area2 .salary-details {
   color: #0066cc;
+  background-color: rgb(240, 139, 6);
   font-weight: bold;
   margin-top: 20px;
 }
@@ -5928,7 +5991,8 @@ label {
   font-weight: bold;
   margin-top: 20px;
   text-align: center;
-  width: 80%;
+  /* width:90%; */
+  padding: 20px;
   /* Match table width */
   margin-left: auto;
   margin-right: auto;
@@ -5948,7 +6012,49 @@ label {
   display: none;
 }
 
+/* 1. Main header – List of Staff */
+#team-area2 h2,
+#team-area2 .staff-list {
+    background: linear-gradient(135deg, #004d40, #00695c) !important;   /* deep teal-green */
+    color: #fff !important;
+}
 
+/* 2. Table header (S.No., Name, Designation, Qualification) */
+#team-area2 th,
+#team-area2 .summary-table th {
+    background: #00695c !important;   /* rich teal */
+    color: #ffffff !important;
+}
+
+/* 3. Table rows – bilkul clean & matching */
+#team-area2 tr:nth-child(even)  { background-color: #f0f8f7 !important; }  /* very light teal */
+#team-area2 tr:nth-child(odd)   { background-color: #ffffff !important; }
+#team-area2 tr:hover            { background-color: #e0f2f1 !important; }
+
+/* 4. Pagination bar */
+#team-area2 .pagination {
+    background: linear-gradient(135deg, #004d40, #00695c) !important;
+    color: #fff !important;
+}
+
+/* 5. Pagination buttons */
+#team-area2 .pagination a {
+    background: #00897b !important;
+    color: #fff !important;
+    padding: 3px;
+}
+#team-area2 .pagination a:hover,
+#team-area2 .pagination .current {
+    background: #ff8c00 !important;   /* school ka orange highlight */
+    color: #fff !important;
+}
+
+/* 6. Salary & payment section */
+#team-area2 .salary-details,
+#team-area2 .payment-mode {
+    /* background: #e8f5f4 !important; */
+    color: #004d40 !important;
+}
 
 /* ==================== RESPONSIVE CSS ONLY ==================== */
 
@@ -6133,6 +6239,72 @@ label {
     .pagination a:last-child {
         padding: 7px 12px !important;
         font-size: 13px;
+    }
+}
+.pagination {
+    /* margin: 30px 0; */
+    padding: 16px 25px;
+    background: #036351;
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-weight: 500;
+    box-shadow: 0 5px 20px rgba(3, 99, 81, 0.35);
+}
+
+.pagination-info {
+    font-size: 15px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pagination-controls a,
+.current-page {
+    padding: 10px 20px;
+    background: #048c76;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.current-page {
+    background: #00bfa5 !important;
+    font-size: 18px !important;
+    box-shadow: 0 0 20px rgba(0, 191, 165, 0.6);
+}
+
+.pagination-controls a:hover {
+    background: #00bfa5;
+    transform: translateY(-3px);
+}
+
+/* Mobile + chhoti screen pe bhi bilkul perfect */
+@media (max-width: 480px) {
+    .pagination {
+        /* flex-direction: column; */
+        text-align: center;
+        padding: 18px 20px;
+        border-radius: 25px;
+    }
+    .pagination-info {
+        margin-bottom: 10px;
+        font-size: 14px;
     }
 }
 
@@ -7399,6 +7571,8 @@ h5 {
 .application-form {
   padding: 20px;
   border-radius: 10px;
+  margin-top: 30px;
+  border: 1px solid rgb(0, 115, 255);
   background: var(--color-white);
   box-shadow: var(--box-shadow);
 }
@@ -7416,15 +7590,18 @@ h5 {
 }
 
 .application-form .form-group label {
-  color: #212536;
+  color: #091e7b;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .application-form .form-control,
 .application-form .form-select {
   padding: 12px 18px;
   border-radius: 8px;
+  border: 1px solid rgb(90, 220, 250);
   box-shadow: none;
+  color: rgb(88, 88, 88);
 }
 
 .application-form .form-control:focus,
@@ -7444,9 +7621,11 @@ h5 {
 .application-form .form-check a {
   color: var(--theme-color);
 }
-
+.application-form #in, .application-form #cap{
+  border: 1px solid rgb(61, 200, 251);
+}
 .application-form .form-check label {
-  color: #212536;
+  color: #0222b0;
   font-weight: 500;
 }
 
@@ -8682,7 +8861,14 @@ h5 {
   transition: 0.3s;
   color: var(--color-white);
 }
-
+@media only screen and (max-width: 360px) {
+    .footer-contact li a {
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 .subscribe-form .form-control {
   padding: 16px 20px;
   border-radius: 12px;
@@ -8973,7 +9159,7 @@ tbody tr:nth-child(even) {
   padding: 5px;
   background-color: #006666;
   color: white;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   border-radius: 5px;
 }
 
@@ -9010,7 +9196,18 @@ tbody tr:nth-child(even) {
     width: 100%;
     box-sizing: border-box;
 }
-
+.faculty-main-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 4px;
+    /* margin: 50px 0; */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff,#fff), linear-gradient(135deg, #00bfa5 0%, #004d40 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    overflow: hidden;
+}
 /* Mobile responsive sirf header ke liye */
 @media (max-width: 768px) {
     .sports-main-title {
@@ -9054,7 +9251,7 @@ tbody tr:nth-child(even) {
 
     /* Pagination mobile par stacked aur touch-friendly */
     .pagination {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 15px;
         padding: 15px;
         text-align: center;
@@ -9501,138 +9698,143 @@ tbody tr:nth-child(even) {
 
 /*  */
 
-/* CBSE Affiliation Box Styling */
+/* CBSE Affiliation Box Styling *//* ==================== FINAL COMPACT & SUPER ATTRACTIVE VERSION ==================== */
 .cbse-affiliation-box {
-    /* background: linear-gradient(135deg, #b2ebf2 0%, #e0f7fa 100%); */
-    border: 2px solid #00acc1;
-    border-radius: 12px;
-    padding: 25px;
-    margin: 30px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 6px 15px rgba(0, 172, 193, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 100%;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 40px 35px 45px;           /* space kam kiya */
+    margin: 50px auto;
+    max-width: 850px;
+    position: relative;
     overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    background-image: 
+        linear-gradient(#fff,#fff),
+        linear-gradient(135deg, #00bfa5 0%, #004d40 70%, #00695c 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
-.cbse-affiliation-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 172, 193, 0.3);
-}
-
-/* Header Text */
+/* Orange Ribbon – ab zyada compact */
 .cbse-affiliation-box h5 {
-    color: #004d40;
-    font-size: 18px;
-    /* background-color: rgb(249, 147, 31); */
-    border-radius: 30px;
-    /* padding: 20px 0px; */
-    line-height: 1.5;
-    /* margin: 0 0 15px 0; */
-    font-weight: 600;
-}
-
-.cbse-affiliation-box h5 strong {
-    color: #006064;
-    font-size: 20px;
-}
-
-.cbse-affiliation-box h5 span {
-    font-size: 15px;
-    color: #00796b;
-    font-style: italic;
-}
-
-/* Info Table */
-.cbse-info-table {
-    background: white;
-    padding: 18px 22px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #ff8c00, #ff6d00);
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: 800;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    margin: -50px auto 35px;          /* upar se kam kiya */
     display: inline-block;
-    /* min-width: 320px; */
-    width: 60%;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-    margin: 15px 0;
+    box-shadow: 0 12px 35px rgba(255,140,0,0.5);
+    text-align: center;
+    line-height: 1.5;
 }
 
-.cbse-info-table table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 15.5px;
+.cbse-affiliation-box h5 strong { font-size: 28px; display: block; margin: 0px 0; }
+.cbse-affiliation-box h5 span { font-size: 17px; padding-top: -50PX;}
+
+/* Table – compact + beautiful */
+.cbse-info-table {
+    background: linear-gradient(145deg, #f8fffe, #e8f5f4);
+    padding: 28px 35px;
+    border-radius: 22px;
+    margin: 25px 0 35px;               /* neeche ka gap kam */
+    box-shadow: inset 0 5px 20px rgba(0,191,165,0.12);
+    border: 3px solid #b2ebf2;
 }
 
 .cbse-info-table td {
-    padding: 8px 0;
-    vertical-align: top;
-    text-align: center;
+    padding: 14px 0;
+    font-size: 18px;
+    border-bottom: 1px dashed #80deea;
 }
 
 .cbse-info-table td:first-child {
-    font-weight: 600;
     color: #004d40;
-    width: 45%;
+    font-weight: 800;
+    width: 48%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.cbse-info-table td:first-child::after {
+    content: '→';
+    color: #ff8c00;
+    margin-left: 8px;
+    font-weight: bold;
 }
 
 .cbse-info-table td:last-child {
-    color: #555;
-    padding-left: 15px;
+    color: #00695c;
+    font-weight: 700;
+    padding-left: 30px;
 }
 
-/* Highlight Colors */
-.provisional { color: #d32f2f !important; font-weight: bold; }
-.date-orange { color: #e65100 !important; font-weight: 600; }
+.provisional { color: #d32f2f !important;  font-size: 20px !important; }
+.date-orange { color: #ff6d00 !important; font-size: 19px !important; }
 
-/* Logo & Title Section */
+/* Logo section – compact aur filled */
 .cbse-logo-section {
-    margin: 25px 0 15px;
+    margin: 30px 0 35px;               /* gap kam kiya */
+    padding: 35px 20px;
+    background: linear-gradient(to bottom, #b9d5d9 0%, #ffffff 70%);
+    border-radius: 22px;
     text-align: center;
+    border-top: 6px solid #ff8c00;
+    border-bottom: 6px solid #ff8c00;
 }
 
 .cbse-logo-section img {
-    width: 160px;
-    height: auto;
-    /* filter: hue-rotate(180deg) brightness(1.05); */
-    /* margin-bottom: 10px; */
+    width: 170px;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.2));
 }
 
 .cbse-logo-section h4 {
-    color: #006064;
-    font-size: 22px;
-    margin: 8px 0;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+    color: #004d40;
+    font-size: 28px;
+    font-weight: 900;
+    margin: 12px 0 6px;
 }
 
 .cbse-logo-section h5 {
-    color: #00796b;
-    font-size: 18px;
-    margin: 0 0 5px;
-    font-weight: bold;
+    color: #00695c;
+    font-size: 21px;
+    font-weight: 700;
+    border-radius: 88px;
+    margin: 0 0 15px;
 }
 
-.cbse-logo-section p {
-    color: #004d40;
-    font-size: 14px;
-    margin: 5px 0 0;
-    font-style: italic;
-    letter-spacing: 0.3px;
-}
-
-/* Visit Link */
+/* Button – center border ke bilkul paas */
 .visit-cbse-link {
     display: inline-block;
-    /* margin-top: 15px; */
-    color: #006064;
-    font-size: 14.5px;
+    background: linear-gradient(135deg, #ff8c00, #e65100);
+    color: #fff !important;
+    padding: 16px 45px;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 800;
     text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px dashed #006064;
-    transition: color 0.3s ease;
+    box-shadow: 0 12px 35px rgba(255,140,0,0.5);
+    transition: all 0.4s;
+    margin-top: 10px;               
 }
 
 .visit-cbse-link:hover {
-    color: #004d40;
-    border-bottom: 1px solid #004d40;
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(255,140,0,0.6);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .cbse-affiliation-box { padding: 35px 20px; margin: 30px 15px; }
+    .cbse-affiliation-box h5 { padding: 34px 30px; font-size: 20px; }
+    .cbse-affiliation-box h5 strong { font-size: 24px; }
+    .cbse-info-table { padding: 22px; }
+    .visit-cbse-link { padding: 14px 15px; font-size: 18px; }
 }
 
 /* Responsive */
@@ -9922,29 +10124,6 @@ tbody tr:nth-child(even) {
             }
         }
 
-        @media (max-width: 480px) {
-            .exam-table th,
-            .exam-table td {
-                display: block;
-                width: 100%;
-            }
-            .exam-table th {
-                border-radius: 8px 8px 0 0;
-            }
-            .exam-table td {
-                border: none;
-                padding-left: 50%;
-                position: relative;
-            }
-            .exam-table td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 12px;
-                width: 45%;
-                font-weight: 600;
-                color: #006064;
-            }
-        }
 
 
 
@@ -10049,7 +10228,8 @@ tbody tr:nth-child(even) {
             padding: 14px 12px;
             text-align: center;
             font-size: 14px;
-            color: #333;
+            color: #023a9b;
+            font-weight: bold;
             border-bottom: 1px solid #e0f7fa;
         }
 
@@ -10240,3 +10420,257 @@ tbody tr:nth-child(even) {
         .section.active {
             display: block;
         }
+
+
+
+        
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 900;
+            color: #004d40;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 6px;
+            background: linear-gradient(90deg, #ff8c00, #ff6d00);
+            border-radius: 50px;
+        }
+        .section-title::before {
+            content: '◆';
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 42px;
+            color: #ff8c00;
+        }
+
+        .social-card {
+            background: #fff;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            transition: all 0.4s;
+            height: 100%;
+        }
+        .social-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 35px 80px rgba(0,0,0,0.25);
+        }
+        .card-header {
+            text-align: center;
+            padding: 30px 20px 20px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-header h4 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #004d40;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+        }
+        .card-header h4 u {
+            /* text-decoration: none; */
+            /* border-bottom: 6px solid; */
+            padding-bottom: 8px;
+        }
+       .icon-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0;   /* auto = CENTER */
+    font-size: 40px;
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+        .icon-btn:hover { transform: scale(1.15); }
+
+        /* Colors */
+        .fb { border-top: 8px solid #1877f2; }
+        .fb u { border-bottom-color: #1877f2; }
+        .fb .icon-btn { background: #1877f2; }
+
+        .yt { border-top: 8px solid #ff0000; }
+        .yt u { border-bottom-color: #ff0000; }
+        .yt .icon-btn { background: #ff0000; }
+
+        .tw { border-top: 8px solid #1da1f2; }
+        .tw u { border-bottom-color: #1da1f2; }
+        .tw .icon-btn { background: #1da1f2; }
+
+        .ig { border-top: 8px solid #e1306c; }
+        .ig u { border-bottom-color: #e1306c; }
+        .ig .icon-btn { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-radius: 22px; }
+
+        .pt { border-top: 8px solid #bd081c; }
+        .pt u { border-bottom-color: #bd081c; }
+        .pt .icon-btn { background: #bd081c; }
+
+        .embed-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .embed-responsive iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+        }
+        .ig-broken-box {
+    text-align: center;
+    width: 100%;
+    padding: 40px 20px;
+    background: transparent;
+}
+.ig-box {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+}
+.ig-logo {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.ig-title {
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ig-msg {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #444;
+    margin: 15px auto;
+    width: 70%;
+    line-height: 20px;
+}
+
+.ig-visit {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #3897f0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+
+    .section-title {
+        font-size: 38px;
+        margin-bottom: 60px;
+    }
+
+    .card-header h4 {
+        font-size: 24px;
+    }
+
+    .icon-btn {
+        width: 65px;
+        height: 65px;
+        font-size: 34px;
+        margin-top: 15px;
+    }
+
+    .ig-title {
+        font-size: 32px;
+    }
+
+    .ig-msg {
+        width: 85%;
+        font-size: 13px;
+    }
+
+    .ig-logo {
+        width: 45px;
+    }
+
+}
+
+
+/* Mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size: 30px;
+        margin-bottom: 45px;
+    }
+
+    .card-header {
+        padding: 20px 10px;
+    }
+
+    .card-header h4 {
+        font-size: 20px;
+    }
+
+    .icon-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+ .ig-logo {
+        width: 42px;
+    }
+    .ig-title {
+        font-size: 28px;
+    }
+    .ig-msg {
+        width: 90%;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .ig-visit {
+        font-size: 13px;
+    }
+}
+
+
+/* Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .card-header h4 {
+        font-size: 18px;
+    }
+
+    .icon-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        margin-top: 12px;
+    }
+
+      
+
+}

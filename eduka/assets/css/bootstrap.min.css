@@ -1294,7 +1294,7 @@ progress {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:780px) {
     .col-md {
         flex: 1 0 0%
     }
@@ -9503,7 +9503,7 @@ fieldset:disabled .btn {
 
 .text-white {
     --bs-text-opacity: 1;
-    line-height: 26px;
+    /* line-height: 26px; */
     word-spacing: -1.2px;
     text-align: justify;
     color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
